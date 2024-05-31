@@ -25,3 +25,12 @@ body {
     text-wrap: balance;
   }
 }
+
+.moveable {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    padding: 1px;
+    cursor: move;
+    z-index: 10;
+}
