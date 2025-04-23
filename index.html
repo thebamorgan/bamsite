@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Morgan - System Admin/Data Architect</title>
+    <!-- Favicon -->
+    <link rel="icon" href=".\favicon.png" type="image/png" sizes="48x48">
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f5f0;
+            color: #5d4a3e;
+            line-height: 1.6;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            overflow: hidden;
+            
+        }
+        
+        a {
+            text-decoration: none;
+            color: #7d6e63;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #c17c56;
+        }
+        
+        /* Left Section with Photo, Name and Blurb */
+        .left-section {
+            background-color: #e6dfd5;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .photo-container {
+            width: 500px;
+            height: 500px;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(93, 74, 62, 0.2);
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            margin: 0 auto 2rem auto;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .identity-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .name {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #a67c52;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .title {
+            font-size: 1.3rem;
+            color: #7d6e63;
+            font-weight: 300;
+        }
+        
+        .intro-text {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-links a {
+            color: #a67c52;
+            font-size: 1rem;
+            position: relative;
+            padding: 0.3rem;
+        }
+        
+        .contact-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #c17c56;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .contact-links a:hover::after {
+            width: 100%;
+        }
+        
+        .contact-links a:hover {
+            color: #c17c56;
+        }
+        
+        /* Resume Section (Right) */
+        .resume {
+            background-color: #f0ebe2;
+            padding: 2rem;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .resume::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(193, 124, 86, 0.05);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            z-index: 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #a67c52;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: #c17c56;
+            margin-top: 0.5rem;
+        }
+        
+        .resume-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(93, 74, 62, 0.1);
+            position: relative;
+            z-index: 1;
+            height: calc(100% - 4rem);
+            overflow-y: auto;
+        }
+        
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+        
+        .resume-section-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #a67c52;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .resume-section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, #c17c56, rgba(193, 124, 86, 0.1));
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1.2rem;
+            border-left: 2px solid #e6dfd5;
+            position: relative;
+        }
+        
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #c17c56;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #5d4a3e;
+        }
+        
+        .item-subtitle {
+            font-style: italic;
+            color: #7d6e63;
+            margin-bottom: 0.4rem;
+        }
+        
+        .item-date {
+            color: #c17c56;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .skill-item {
+            background-color: rgba(193, 124, 86, 0.1);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #7d6e63;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            background-color: rgba(193, 124, 86, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr;
+                height: 100vh;
+                overflow-y: auto;
+            }
+            
+            .left-section, .resume {
+                overflow-y: visible;
+                padding: 1.5rem;
+            }
+            
+            .resume-content {
+                height: auto;
+                overflow-y: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Section with Photo, Name and Blurb -->
+    <section class="left-section">
+        <div class="photo-container">
+            <img src="./prof.jpg" alt="Ben Morgan Profile Picture" class="profile-img">
+        </div>
+        <div class="identity-container">
+            <h1 class="name">Ben Morgan</h1>
+            <h2 class="title">System Admin / Data Architect</h2>
+        </div>
+        <p class="intro-text">
+            I’m a hands-on IT professional with experience in systems administration, workflow automation, and technical support for large user bases. I’ve worked as an assistant team lead, contributed to policy-setting meetings, and helped harden systems through security scans and PowerShell scripting. Whether troubleshooting hardware/software issues, educating end users, or streamlining help desk operations, I’m committed to delivering effective and scalable IT solutions.
+        </p>
+        <div class="contact-links">
+            <a href="mailto:hireme@bamorgan.com">Email</a>
+            <a href="https://linkedin.com/in/benmorgan" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+    
+    <!-- Resume Section (Right) -->
+    <section class="resume">
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-content">
+            <div class="resume-section">
+                <h3 class="resume-section-title">Experience</h3>
+                
+                <div class="experience-item">
+                    <div class="item-title">IT Systems Engineer</div>
+                    <div class="item-subtitle">DEVCOM Aviation & Missile Center - SAIC Contract</div>
+                    <div class="item-date">April 2025 - Present</div>
+                    <ul>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="item-title">Data Architect</div>
+                    <div class="item-subtitle">DEVCOM Aviation & Missile Center - IPTA Contract</div>
+                    <div class="item-date">September 2024 - April 2025</div>
+                    <ul>
+                        <li>Created reports to help teams identify improvement areas</li>
+                        <li>Designed, developed, and maintained Power Apps solutions to automate business processes and enhance user experience.</li>
+                        <li>Created Power Automate workflows to streamline approvals, notifications, and data integration across platforms.</li>
+                        <li>Wrote custom Power Automate expressions and Power Apps formulas for complex logic and automation.</li>
+                        <li>Documented workflows, best practices, and troubleshooting guides for Power Apps, Power Automate, and Power BI.</li>
+                        <li>Worked with business stakeholders to gather requirements and deliver low-code/no-code solutions that improve productivity.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="item-title">Tier 2 System Administrator</div>
+                    <div class="item-subtitle">DEVCOM Aviation & Missile Center - IPTA & UAH Contract</div>
+                    <div class="item-date">January 2022 - September 2022; June 2023 - September 2024</div>
+                    <ul>
+                        <li>Acted as an assistant team lead</li>
+                        <li>Participated in meetings to set policies and changes</li>
+                        <li>Performed hardening of systems</li>
+                        <li>Performed security scans of removable media and user systems</li>
+                        <li>Wrote PowerShell scripts to solve redundant problems</li>
+                        <li>Created documentation for end users and provided feedback on peer-created documentation</li>
+                        <li>Assisted users with Microsoft/Army 365 error codes</li>
+                        <li>Instructed and mentored new employees on procedures and practices</li>
+                        <li>Logged help desk requests through Jira</li>
+                        <li>Installed user’s credentials on mobile phones using Ivanti MobileIron MDM</li>
+                        <li>Assisted and educated users with troubleshooting software and hardware issues</li>
+                    </ul>
+                </div>
+            
+                <div class="experience-item">
+                    <div class="item-title">Classroom Technician (Steps 1-3)</div>
+                    <div class="item-subtitle">The University of Alabama in Huntsville</div>
+                    <div class="item-date">October 2019 - December 2022</div>
+                    <ul>
+                        <li>Installed and maintained 150+ computers & audio-video components within classrooms</li>
+                        <li>Installed monitors and projector systems for classroom computers</li>
+                        <li>Planned software deployment throughout the campus</li>
+                        <li>Supported professors with classroom technology needs and issues</li>
+                        <li>Instructed professors and new coworkers on how equipment is operated and maintained</li>
+                        <li>Provided ideas to increase efficiency in our day-to-day workflow</li>
+                        <li>Provided solutions to the UAH Systems team on how Classroom Tech can more efficiently deploy and manage classroom computers</li>
+                    </ul>
+                </div>
+            <div class="resume-section">
+                <h3 class="resume-section-title">Additional IT Experience</h3>
+                
+                <div class="education-item">
+                    <div class="item-title">Football Film Manager & Technician</div>
+                    <div class="item-subtitle">Athens City Schools</div>
+                    <div class="item-date">August 2017 - Dec 2022</div>
+                </div>
+                
+
+                <div class="education-item">
+                    <div class="item-title">Home Unraid Server</div>
+                    <div class="item-date">March 2024 - Present</div>
+                </div>
+
+            <div class="resume-section">
+                <h3 class="resume-section-title">Education</h3>
+                
+                <div class="education-item">
+                    <div class="item-title">Bachelor of Science in Computer Science</div>
+                    <div class="item-subtitle">The University of Alabama in Huntsville</div>
+                    <div class="item-date">August 2019 - May 2024</div>
+                    <p>Minor in Information Systems</p>
+                </div>
+            
+            <div class="resume-section">
+                <h3 class="resume-section-title">Skills</h3>
+                
+                <div class="skills-container">
+                    <div class="skill-item">PowerShell (Intermediate)</div>
+                    <div class="skill-item">Python (Novice)</div>
+                    <div class="skill-item">C++ (Novice)</div>
+                    <div class="skill-item">ARMv8 Assembly (Novice)</div>
+                    <div class="skill-item">Oracle SQL (Novice)</div>
+                    <div class="skill-item">System Hardening</div>
+                    <div class="skill-item">GitHub</div>
+                    <div class="skill-item">Active Directory, SCCM, & Group Policy</div>
+                    <div class="skill-item">Atlassian Jira</div>
+                    <div class="skill-item">Teamdynamix</div>
+                    <div class="skill-item">Windows, macOS, & Linux Experience</div>
+                    <div class="skill-item">Mentoring & Educating</div>
+                    <div class="skill-item">Documentation Creation</div>
+                    <div class="skill-item">Microsoft Power Platform</div>
+                    <div class="skill-item">Docker</div>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3 class="resume-section-title">Certifications</h3>
+
+                <div class="skills-container">
+                    <div class="skill-item">Active Security Clearance</div>
+                    <div class="skill-item">CompTIA Security+ (SY-601)</div>
+                    <div class="skill-item">CISA Windows Operating System Security</div>
+                    <div class="skill-item">Atlassian Jira & Confluence Fundamentals</div>
+                    <div class="skill-item">Department Of The Army Cyber Security Fundamentals</div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
