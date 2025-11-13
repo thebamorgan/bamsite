@@ -9,29 +9,28 @@
 }
 
 body {
-    background-color: #f8f5f0;
-    color: #5d4a3e;
+    background-color: #fdfaf6; /* Soft off-white */
+    color: #5e6c5a; /* Muted dark green for text */
     line-height: 1.6;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
     overflow: hidden;
-    
 }
 
 a {
     text-decoration: none;
-    color: #7d6e63;
+    color: #a87c7c; /* Muted pastel red */
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #c17c56;
+    color: #d4aaaa; /* Lighter pastel red for hover */
 }
 
 /* Left Section with Photo, Name and Blurb */
 .left-section {
-    background-color: #e6dfd5;
+    background-color: #e8e8e1; /* Light greyish green */
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -44,8 +43,8 @@ a:hover {
     height: 500px;
     max-width: 100%;
     overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0 10px 30px rgba(93, 74, 62, 0.2);
+    border-radius: 50%; /* A soft shadow with a hint of green */
+    box-shadow: 0 10px 30px rgba(94, 108, 90, 0.2);
     border: 8px solid rgba(255, 255, 255, 0.2);
     margin: 0 auto 2rem auto;
 }
@@ -64,13 +63,13 @@ a:hover {
 .name {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
-    color: #a67c52;
+    color: #b34444; /* Deeper Christmas red */
     font-family: 'Playfair Display', serif;
 }
 
 .title {
     font-size: 1.3rem;
-    color: #7d6e63;
+    color: #7a8a76; /* Medium green */
     font-weight: 300;
 }
 
@@ -88,7 +87,7 @@ a:hover {
 }
 
 .contact-links a {
-    color: #a67c52;
+    color: #b34444; /* Deeper Christmas red */
     font-size: 1rem;
     position: relative;
     padding: 0.3rem;
@@ -99,23 +98,23 @@ a:hover {
     position: absolute;
     width: 0;
     height: 2px;
-    background: #c17c56;
+    background: #d4aaaa; /* Lighter pastel red */
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
 }
 
 .contact-links a:hover::after {
-    width: 100%;
+    width: 100%; 
 }
 
 .contact-links a:hover {
-    color: #c17c56;
+    color: #d4aaaa; /* Lighter pastel red */
 }
 
 /* Resume Section (Right) */
 .resume {
-    background-color: #f0ebe2;
+    background-color: #f7f2ec; /* Very light, warm off-white */
     padding: 2rem;
     overflow-y: auto;
     position: relative;
@@ -128,7 +127,7 @@ a:hover {
     right: 5%;
     width: 150px;
     height: 150px;
-    background-color: rgba(193, 124, 86, 0.05);
+    background-color: rgba(179, 68, 68, 0.07); /* Faint red decorative blob */
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     z-index: 0;
 }
@@ -136,7 +135,7 @@ a:hover {
 .section-title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #a67c52;
+    color: #b34444; /* Deeper Christmas red */
     font-family: 'Playfair Display', serif;
     position: relative;
 }
@@ -146,7 +145,7 @@ a:hover {
     display: block;
     width: 40px;
     height: 3px;
-    background-color: #c17c56;
+    background-color: #d4aaaa; /* Lighter pastel red */
     margin-top: 0.5rem;
 }
 
@@ -154,7 +153,7 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(93, 74, 62, 0.1);
+    box-shadow: 0 5px 20px rgba(94, 108, 90, 0.1); /* Soft green shadow */
     position: relative;
     z-index: 1;
     height: calc(100% - 4rem);
@@ -168,7 +167,7 @@ a:hover {
 .resume-section-title {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #a67c52;
+    color: #b34444; /* Deeper Christmas red */
     font-family: 'Playfair Display', serif;
     position: relative;
     padding-bottom: 0.5rem;
@@ -181,13 +180,13 @@ a:hover {
     bottom: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, #c17c56, rgba(193, 124, 86, 0.1));
+    background: linear-gradient(to right, #d4aaaa, rgba(212, 170, 170, 0.1)); /* Pastel red gradient */
 }
 
 .experience-item, .education-item {
     margin-bottom: 1.5rem;
     padding-left: 1.2rem;
-    border-left: 2px solid #e6dfd5;
+    border-left: 2px solid #e8e8e1; /* Light greyish green */
     position: relative;
 }
 
@@ -199,23 +198,23 @@ a:hover {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #c17c56;
+    background-color: #d4aaaa; /* Lighter pastel red */
 }
 
 .item-title {
     font-weight: 600;
     font-size: 1.1rem;
-    color: #5d4a3e;
+    color: #5e6c5a; /* Muted dark green */
 }
 
 .item-subtitle {
     font-style: italic;
-    color: #7d6e63;
+    color: #7a8a76; /* Medium green */
     margin-bottom: 0.4rem;
 }
 
 .item-date {
-    color: #c17c56;
+    color: #b34444; /* Deeper Christmas red */
     font-weight: 500;
     margin-bottom: 0.4rem;
     font-size: 0.9rem;
@@ -228,16 +227,16 @@ a:hover {
 }
 
 .skill-item {
-    background-color: rgba(193, 124, 86, 0.1);
+    background-color: rgba(179, 68, 68, 0.1); /* Light red background */
     padding: 0.4rem 1.2rem;
     border-radius: 30px;
     font-size: 0.9rem;
-    color: #7d6e63;
+    color: #5e6c5a; /* Muted dark green */
     transition: all 0.3s ease;
 }
 
 .skill-item:hover {
-    background-color: rgba(193, 124, 86, 0.2);
+    background-color: rgba(179, 68, 68, 0.2); /* Slightly darker red on hover */
     transform: translateY(-2px);
 }
 
