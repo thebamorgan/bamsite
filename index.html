@@ -3,166 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Morgan - System Admin/Data Architect</title>
+    <title>Ben Morgan's Desktop</title>
     <!-- Favicon -->
     <link rel="icon" href=".\favicon.png" type="image/png" sizes="48x48">
+    <!-- Google Fonts for Pixelated Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <!-- jQuery & jQuery UI for Draggable Windows -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
-    <!-- Left Section with Photo, Name and Blurb -->
-    <section class="left-section">
-        <div class="photo-container">
-            <img src="./prof.png" alt="Ben Morgan Profile Picture" class="profile-img">
+    <div id="desktop">
+        <!-- Desktop Icons -->
+        <div class="icon" id="resume-icon">
+            <img src="https://win98icons.alexmeub.com/icons/png/template_empty-0.png" alt="Resume Icon">
+            <span>My Resume.txt</span>
         </div>
-        <div class="identity-container">
-            <h1 class="name">Ben Morgan</h1>
-            <h2 class="title">System Admin / Data Architect</h2>
+        <div class="icon" id="aboutme-icon">
+            <img src="https://win98icons.alexmeub.com/icons/png/user_computer-1.png" alt="About Me Icon">
+            <span>About Me.txt</span>
         </div>
-        <p class="intro-text">
-            I’m a hands-on IT professional with experience in systems administration, workflow automation, and technical support for large user bases. I’ve worked as an assistant team lead, contributed to policy-setting meetings, and helped harden systems through security scans and PowerShell scripting. Whether troubleshooting hardware/software issues, educating end users, or streamlining help desk operations, I’m committed to delivering effective and scalable IT solutions.
-        </p>
-        <div class="contact-links">
-            <a href="mailto:hireme@bamorgan.com">Email</a>
-            <a href="https://linkedin.com/in/thebamorgan" target="_blank">LinkedIn</a>
+        <div class="icon" id="contact-icon">
+            <img src="https://win98icons.alexmeub.com/icons/png/modem-5.png" alt="Contact Icon">
+            <span>Contact.txt</span>
         </div>
-    </section>
-    
-    <!-- Resume Section (Right) -->
-    <section class="resume">
-        <h2 class="section-title">Resume</h2>
-        <div class="resume-content">
-            <div class="resume-section">
-                <h3 class="resume-section-title">Experience</h3>
-                
-                <div class="experience-item">
-                    <div class="item-title">IT Systems Integrator</div>
-                    <div class="item-subtitle">DEVCOM Aviation & Missile Center - SAIC Contract</div>
-                    <div class="item-date">April 2025 - Present</div>
-                    <ul>
-                        <li>Installation, configuration, and maintaining information technology systems in both a stand-alone and client-server environments.</li>
-                        <li>Installation, configuration, and maintaining hardware and software for local system network services, storage networking devices, and servers.</li>
-                        <li>Integration of multiple information systems in a networked environment, evaluation and resolution of information system issues.</li>
-                        <li>Assisted in the integration of state of the art $12M Army aviation simulation systems and general infrastructure desktops, audio visual, and IT systems as well as maintaining inventory and distribution of excess hardware.</li>
-                        <li>Managed & tracked $500K+ of computer hardware inventory for Army aviation simulator and enterprise systems</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="item-title">Data Architect</div>
-                    <div class="item-subtitle">DEVCOM Aviation & Missile Center - IPTA Contract</div>
-                    <div class="item-date">September 2024 - April 2025</div>
-                    <ul>
-                        <li>Created reports to help teams identify improvement areas</li>
-                        <li>Designed, developed, and maintained Power Apps solutions to automate business processes and enhance user experience.</li>
-                        <li>Created Power Automate workflows to streamline approvals, notifications, and data integration across platforms.</li>
-                        <li>Wrote custom Power Automate expressions and Power Apps formulas for complex logic and automation.</li>
-                        <li>Documented workflows, best practices, and troubleshooting guides for Power Apps, Power Automate, and Power BI.</li>
-                        <li>Worked with business stakeholders to gather requirements and deliver low-code/no-code solutions that improve productivity.</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="item-title">Tier 2 System Administrator</div>
-                    <div class="item-subtitle">DEVCOM Aviation & Missile Center - IPTA & UAH Contract</div>
-                    <div class="item-date">January 2022 - September 2022; June 2023 - September 2024</div>
-                    <ul>
-                        <li>Acted as an assistant team lead</li>
-                        <li>Participated in meetings to set policies and changes</li>
-                        <li>Performed hardening of systems</li>
-                        <li>Performed security scans of removable media and user systems</li>
-                        <li>Wrote PowerShell scripts to solve redundant problems</li>
-                        <li>Created documentation for end users and provided feedback on peer-created documentation</li>
-                        <li>Assisted users with Microsoft/Army 365 error codes</li>
-                        <li>Instructed and mentored new employees on procedures and practices</li>
-                        <li>Logged help desk requests through Jira</li>
-                        <li>Installed user’s credentials on mobile phones using Ivanti MobileIron MDM</li>
-                        <li>Assisted and educated users with troubleshooting software and hardware issues</li>
-                    </ul>
-                </div>
-            
-                <div class="experience-item">
-                    <div class="item-title">Classroom Technician (Steps 1-3)</div>
-                    <div class="item-subtitle">The University of Alabama in Huntsville</div>
-                    <div class="item-date">October 2019 - December 2022</div>
-                    <ul>
-                        <li>Installed and maintained 150+ computers & audio-video components within classrooms</li>
-                        <li>Installed monitors and projector systems for classroom computers</li>
-                        <li>Planned software deployment throughout the campus</li>
-                        <li>Supported professors with classroom technology needs and issues</li>
-                        <li>Instructed professors and new coworkers on how equipment is operated and maintained</li>
-                        <li>Provided ideas to increase efficiency in our day-to-day workflow</li>
-                        <li>Provided solutions to the UAH Systems team on how Classroom Tech can more efficiently deploy and manage classroom computers</li>
-                    </ul>
-                </div>
-            <div class="resume-section">
-                <h3 class="resume-section-title">Additional IT Experience</h3>
-                
-                <div class="education-item">
-                    <div class="item-title">Football Film Manager & Technician</div>
-                    <div class="item-subtitle">Athens City Schools</div>
-                    <div class="item-date">August 2017 - Dec 2022</div>
-                </div>
-                
 
-                <div class="education-item">
-                    <div class="item-title">Home Unraid Server</div>
-                    <div class="item-date">March 2024 - Present</div>
-                </div>
-
-            <div class="resume-section">
-                <h3 class="resume-section-title">Education</h3>
-                
-                <div class="education-item">
-                    <div class="item-title">Master of Science in Information Systems</div>
-                    <div class="item-subtitle">The University of Alabama in Huntsville</div>
-                    <div class="item-date">August 2025 - Present (Est. Spring 2027)</div>
-                </div>
-                
-                <div class="education-item">
-                    <div class="item-title">Bachelor of Science in Computer Science</div>
-                    <div class="item-subtitle">The University of Alabama in Huntsville</div>
-                    <div class="item-date">August 2019 - May 2024</div>
-                    <p>Minor in Information Systems</p>
-                </div>
-            
-            <div class="resume-section">
-                <h3 class="resume-section-title">Skills</h3>
-                
-                <div class="skills-container">
-                    <div class="skill-item">PowerShell (Intermediate)</div>
-                    <div class="skill-item">Python (Novice)</div>
-                    <div class="skill-item">C++ (Novice)</div>
-                    <div class="skill-item">ARMv8 Assembly (Novice)</div>
-                    <div class="skill-item">Oracle SQL (Novice)</div>
-                    <div class="skill-item">System Hardening</div>
-                    <div class="skill-item">GitHub</div>
-                    <div class="skill-item">Active Directory, SCCM, & Group Policy</div>
-                    <div class="skill-item">Atlassian Jira</div>
-                    <div class="skill-item">Teamdynamix</div>
-                    <div class="skill-item">Windows, macOS, & Linux Experience</div>
-                    <div class="skill-item">Mentoring & Educating</div>
-                    <div class="skill-item">Documentation Creation</div>
-                    <div class="skill-item">Microsoft Power Platform</div>
-                    <div class="skill-item">Docker</div>
+        <!-- Windows (hidden by default) -->
+        <div class="window" id="resume-window" style="display:none; width: 600px; height: 400px; top: 100px; left: 150px;">
+            <div class="title-bar">
+                <div class="title-bar-text">My Resume.txt</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" class="close-button"></button>
                 </div>
             </div>
-
-            <div class="resume-section">
-                <h3 class="resume-section-title">Certifications</h3>
-
-                <div class="skills-container">
-                    <div class="skill-item">Active Security Clearance</div>
-                    <div class="skill-item">CompTIA Security+ (SY-601)</div>
-                    <div class="skill-item">CISA Windows Operating System Security</div>
-                    <div class="skill-item">Atlassian Jira & Confluence Fundamentals</div>
-                    <div class="skill-item">Department Of The Army Cyber Security Fundamentals</div>
-                    
-
-                </div>
+            <div class="window-body">
+                <h3>Experience</h3>
+                <h4>IT Systems Integrator | DEVCOM Aviation & Missile Center - SAIC Contract (April 2025 - Present)</h4>
+                <ul>
+                    <li>Installation, configuration, and maintaining information technology systems in both a stand-alone and client-server environments.</li>
+                    <li>Managed & tracked $500K+ of computer hardware inventory for Army aviation simulator and enterprise systems</li>
+                </ul>
+                <h4>Data Architect | DEVCOM Aviation & Missile Center - IPTA Contract (September 2024 - April 2025)</h4>
+                <ul>
+                    <li>Designed, developed, and maintained Power Apps solutions to automate business processes and enhance user experience.</li>
+                </ul>
+                <h4>Tier 2 System Administrator | DEVCOM Aviation & Missile Center - IPTA & UAH Contract (Jan 2022 - Sep 2024)</h4>
+                <ul>
+                    <li>Acted as an assistant team lead and participated in meetings to set policies and changes.</li>
+                    <li>Wrote PowerShell scripts to solve redundant problems.</li>
+                </ul>
+                <hr>
+                <h3>Education</h3>
+                <h4>Master of Science in Information Systems | The University of Alabama in Huntsville (Est. Spring 2027)</h4>
+                <h4>Bachelor of Science in Computer Science | The University of Alabama in Huntsville (May 2024)</h4>
+                <hr>
+                <h3>Skills</h3>
+                <p>PowerShell, Python, C++, System Hardening, Active Directory, SCCM, Jira, Power Platform, Docker, Windows, macOS, Linux</p>
             </div>
         </div>
-    </section>
+
+        <div class="window" id="aboutme-window" style="display:none; width: 450px; height: 300px; top: 50px; left: 50px;">
+            <div class="title-bar">
+                <div class="title-bar-text">About Me.txt</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" class="close-button"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img src="./prof.png" alt="Ben Morgan" style="float: left; width: 100px; margin-right: 15px; border: 2px solid #000;">
+                <h3>Ben Morgan</h3>
+                <h4>System Admin / Data Architect</h4>
+                <p>
+                    I’m a hands-on IT professional with experience in systems administration, workflow automation, and technical support for large user bases. I’ve worked as an assistant team lead, contributed to policy-setting meetings, and helped harden systems through security scans and PowerShell scripting. Whether troubleshooting hardware/software issues, educating end users, or streamlining help desk operations, I’m committed to delivering effective and scalable IT solutions.
+                </p>
+            </div>
+        </div>
+
+        <div class="window" id="contact-window" style="display:none; width: 300px; height: 200px; top: 200px; left: 400px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Contact.txt</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close" class="close-button"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <h3>Get In Touch</h3>
+                <p>You can reach me via the following channels:</p>
+                <ul>
+                    <li><a href="mailto:hireme@bamorgan.com">Email: hireme@bamorgan.com</a></li>
+                    <li><a href="https://linkedin.com/in/thebamorgan" target="_blank">LinkedIn: /in/thebamorgan</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="taskbar">
+        <button id="start-button">
+            <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" alt="Start Menu Icon">
+            <strong>Start</strong>
+        </button>
+        <div id="start-menu" style="display:none;">
+            <div class="start-menu-side">
+                <span>Ben Morgan's<strong>98</strong></span>
+            </div>
+            <ul>
+                <li><img src="https://win98icons.alexmeub.com/icons/png/template_empty-0.png" alt=""> My Resume</li>
+                <li><img src="https://win98icons.alexmeub.com/icons/png/user_computer-1.png" alt=""> About Me</li>
+                <li><img src="https://win98icons.alexmeub.com/icons/png/modem-5.png" alt=""> Contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
