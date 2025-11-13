@@ -1,0 +1,5 @@
+# Ignore macOS folder attributes
+.DS_Store
+
+# Ignore the git directory itself
+.git
