@@ -112,15 +112,49 @@
     /* ✏️ PHOTO: replace the src in the <img> tag with your own image URL or file path */
     .hero-photo-wrap {
       flex-shrink: 0;
+      perspective: 1000px;
     }
+    
+    .hero-photo-inner {
+      position: relative;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    
+    .hero-photo-wrap:hover .hero-photo-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .hero-photo-front, .hero-photo-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 50%;
+    }
+    
+    .hero-photo-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotateY(180deg);
+    }
+
     .hero-photo {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      object-fit: cover;
       border: 3px solid var(--accent);
       box-shadow: 0 0 0 6px rgba(201,168,76,0.12);
       display: block;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
     }
     /* Placeholder shown when no real image is set */
     .hero-photo-placeholder {
@@ -303,17 +337,14 @@
     }
 
     /* ─── SKILLS ─────────────────────────────────────────────── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 2px;
-    }
     .skill-group {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 20px 22px;
+  transition: border-color var(--transition);
     }
+.skill-group:hover { border-color: rgba(201,168,76,0.3); }
     .skill-group-name {
       font-size: 11px;
       font-weight: 700;
