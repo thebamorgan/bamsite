@@ -241,6 +241,7 @@
     }
     .contact-chip:hover { color: var(--text); text-decoration: none; }
     .contact-chip svg { color: var(--accent); flex-shrink: 0; }
+    .print-only { display: none !important; }
 
     /* ─── SECTION SHARED ─────────────────────────────────────── */
     .resume-section {
@@ -458,34 +459,196 @@
 
     /* ─── PRINT ──────────────────────────────────────────────── */
     @media print {
-      @page { margin: 1.4cm 1.6cm; }
+      @page { margin: 0.5in; }
       body {
         background: #fff !important;
         color: #1a1a1a !important;
-        font-size: 10pt;
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: 10pt !important;
+        line-height: 1.35 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
       :root {
         --bg: #fff;
-        --bg-card: #f7f7f7;
-        --text: #111;
-        --text-muted: #444;
-        --accent: #8B6914;
-        --border: #ddd;
-        --accent-soft: rgba(139,105,20,0.07);
+        --bg-card: transparent;
+        --text: #000;
+        --text-muted: #000;
+        --accent: #000;
+        --border: transparent;
+        --accent-soft: transparent;
       }
+      
+      /* Hide web-only UI elements */
       .site-nav, .btn-download, .site-footer { display: none !important; }
       .hero-photo-wrap, .hero-photo-placeholder { display: none !important; }
-      .hero { display: block; padding: 0 0 24pt; }
-      .hero-name::after { display: none; }
-      .page-wrapper { padding: 0; max-width: 100%; }
-      .resume-section { padding: 20pt 0 0; }
+      .web-only, .contact-chip.web-only { display: none !important; }
+      .print-only, .contact-chip.print-only { display: inline !important; }
+      
+      /* Reset layout & padding */
+      .page-wrapper { padding: 0 !important; max-width: 100% !important; }
+      .resume-section { padding: 0 !important; margin-bottom: 12pt !important; page-break-inside: auto; }
+      
+      /* Remove Web Card Styles & Blocks completely */
       .exp-item, .skill-group, .edu-item, .project-card {
-        border: 1px solid #ddd !important;
-        break-inside: avoid;
-        page-break-inside: avoid;
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin-bottom: 10pt !important;
+        box-shadow: none !important;
+        break-inside: auto;
+        page-break-inside: auto; /* Allow natural text flowing */
       }
+
+      /* Hero / Header Formatting */
+      .hero {
+        display: block !important;
+        padding: 0 0 10pt !important;
+        text-align: center;
+        border-bottom: none !important;
+      }
+      .hero-content { display: block !important; }
+      .hero-name {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: 22pt !important;
+        font-weight: bold;
+        margin-bottom: 2pt !important;
+      }
+      .hero-name::after { display: none !important; }
+      
+      .hero-eyebrow {
+        font-size: 12pt !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        letter-spacing: normal !important;
+        margin: 4pt 0 !important;
+        text-transform: none !important;
+      }
+
+      .hero-contact {
+        display: block !important;
+        margin-bottom: 6pt;
+      }
+      .contact-chip {
+        color: #000 !important;
+        font-size: 10pt !important;
+        display: inline !important;
+      }
+      .contact-chip svg { display: none !important; } /* Hide icons */
+      .contact-chip:not(:last-child)::after {
+        content: ' | ';
+        margin: 0 6px;
+      }
+
+      /* Section Headers (EDUCATION, EXPERIENCE, etc) */
+      .section-label {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: 12pt !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        text-transform: uppercase;
+        color: #000 !important;
+        display: block !important;
+        border-bottom: 1px solid #000 !important;
+        padding-bottom: 2pt !important;
+        margin-bottom: 8pt !important;
+        letter-spacing: normal !important;
+      }
+      .section-label::before,
+      .section-label::after { display: none !important; }
+
+      /* Summary Text */
+      .summary-text { font-size: 10pt !important; color: #000 !important; max-width: 100% !important; margin: 0 !important; }
+
+      /* Education List Adjustments */
+      .edu-item { flex-wrap: nowrap !important; margin-bottom: 8pt !important; align-items: flex-start !important; }
+      .edu-degree {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: 10.5pt !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        margin: 0 !important;
+      }
+      .edu-school {
+        font-size: 10pt !important;
+        color: #000 !important;
+        font-style: italic !important;
+      }
+      .edu-date {
+        font-size: 10pt !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        text-align: right;
+        margin-left: auto;
+      }
+
+      /* Experience List Adjustments */
+      .exp-header {
+        flex-wrap: nowrap !important;
+        margin-bottom: 0 !important;
+        align-items: baseline !important;
+      }
+      .exp-role {
+        font-family: 'Times New Roman', Times, serif !important;
+        font-size: 10.5pt !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        margin: 0 !important;
+      }
+      .exp-company {
+        font-size: 10pt !important;
+        color: #000 !important;
+        font-style: italic !important;
+        margin-bottom: 4pt !important;
+      }
+      .exp-date {
+        font-size: 10pt !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        text-align: right;
+        line-height: 1.2 !important;
+        margin-left: auto;
+      }
+      
+      /* Inject "Key Contributions:" text programmatically */
+      .exp-bullets { padding-left: 16pt !important; }
+      .exp-bullets::before {
+        content: 'Key Contributions:';
+        display: block;
+        font-style: italic;
+        font-weight: bold;
+        margin-bottom: 4pt;
+        color: #000;
+        margin-left: -16pt;
+      }
+      .exp-bullets li {
+        color: #000 !important;
+        font-size: 10pt !important;
+        margin-bottom: 0 !important;
+        line-height: 1.2 !important;
+        padding-left: 0 !important;
+        list-style-type: disc !important;
+      }
+      .exp-bullets li::before { display: none !important; }
+
+      /* Skills & Certs Inline Text Formatting */
+      .skill-tags {
+        display: block !important;
+        margin: 0 !important;
+      }
+      .skill-tag {
+        background: transparent !important;
+        border: none !important;
+        color: #000 !important;
+        font-size: 10pt !important;
+        padding: 0 !important;
+        display: inline !important;
+      }
+      .skill-tag::before { display: none !important; }
+      .skill-tag:not(:last-child)::after {
+        content: ', ';
+      }
+
       a { color: inherit !important; text-decoration: none !important; }
     }
 
