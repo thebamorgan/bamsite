@@ -14,12 +14,11 @@
   <!-- ════════════ NAV ════════════ -->
   <nav class="site-nav" aria-label="Page navigation">
     <div class="nav-inner">
-      <span class="nav-name">Alex Morgan</span>
+      <span class="nav-name">Ben Morgan</span>
       <div class="nav-links">
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
         <button class="btn-download" onclick="window.print()">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
@@ -35,113 +34,137 @@
     <!-- ════════════ HERO ════════════ -->
     <header class="hero">
       <div class="hero-content">
-        <!-- ✏️ EDIT: your title/tagline -->
-        <p class="hero-eyebrow">Full-Stack Software Engineer</p>
-        <!-- ✏️ EDIT: your name -->
-        <h1 class="hero-name">Alex Morgan</h1>
-        <!-- ✏️ EDIT: one-line descriptor -->
-        <p class="hero-title">Building thoughtful products at the intersection of performance and user experience</p>
-        <!-- ✏️ EDIT: contact links — add/remove chips as needed -->
+        <p class="hero-eyebrow">System Administrator / Data Architect</p>
+        <h1 class="hero-name">Ben Morgan</h1>
         <div class="hero-contact">
-          <a href="mailto:alex@example.com" class="contact-chip">
+          <a href="mailto:hireme@bamorgan.com" class="contact-chip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            alex@example.com
+            hireme@bamorgan.com
           </a>
-          <a href="tel:+12345678900" class="contact-chip">
+          <!-- <a href="tel:+12563686848" class="contact-chip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.62 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-            (234) 567-8900
-          </a>
-          <a href="https://linkedin.com/in/alexmorgan" class="contact-chip" target="_blank" rel="noopener">
+            (256) 368-6848
+          </a> -->
+          <a href="https://linkedin.com/in/thebamorgan" class="contact-chip" target="_blank" rel="noopener">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            linkedin.com/in/alexmorgan
-          </a>
-          <a href="https://github.com/alexmorgan" class="contact-chip" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            github.com/alexmorgan
+            linkedin.com/in/thebamorgan
           </a>
           <span class="contact-chip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            San Francisco, CA
+            Huntsville, AL
           </span>
         </div>
       </div>
 
-      <!-- ✏️ PHOTO: click the circle to upload your photo, or replace the placeholder with:
-           <div class="hero-photo-wrap"><img class="hero-photo" src="your-photo.jpg" alt="Alex Morgan" /></div> -->
-      <div class="hero-photo-wrap" id="photoWrap">
-        <div class="hero-photo-placeholder" id="photoPlaceholder" title="Click to upload photo">
-          <input type="file" accept="image/*" id="photoInput" aria-label="Upload profile photo" />
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent);opacity:0.7"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <span>Upload<br/>photo</span>
-        </div>
-      </div>
+      <!-- PHOTO: -->
+        <div class="hero-photo-wrap"><img class="hero-photo" src="prof.png" alt="Ben Morgan" /></div> 
+
     </header>
-
-    <script>
-      // Live photo upload — replaces placeholder with the chosen image
-      document.getElementById('photoInput').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = function(ev) {
-          const wrap = document.getElementById('photoWrap');
-          wrap.innerHTML = '<img class="hero-photo" src="' + ev.target.result + '" alt="Profile photo" />';
-        };
-        reader.readAsDataURL(file);
-      });
-    </script>
-
     <!-- ════════════ SUMMARY ════════════ -->
-    <!-- ✏️ EDIT: swap in your own bio. Delete this whole section if you don't want it. -->
     <section class="resume-section" id="summary">
       <h2 class="section-label">About</h2>
       <p class="summary-text">
-        Software engineer with <strong>7+ years</strong> of experience building scalable web applications and data-driven products. I thrive in fast-moving environments where good architecture and great collaboration matter equally. Passionate about <strong>developer tooling, performance optimization</strong>, and mentoring early-career engineers.
+        I’m a hands-on IT professional with experience in systems administration, workflow automation, and technical support for large user bases. I’ve worked as an assistant team lead, contributed to policy-setting meetings, and helped harden systems through security scans and PowerShell scripting. Whether troubleshooting hardware/software issues, educating end users, or streamlining help desk operations, I’m committed to delivering effective and scalable IT solutions.
       </p>
     </section>
 
+    <!-- ════════════ EDUCATION ════════════ -->
+    <section class="resume-section" id="education">
+      <h2 class="section-label">Education</h2>
+      <ul class="education-list">
+
+        <li class="edu-item">
+          <div>
+            <div class="edu-degree">Master of Science in Information Systems</div>
+            <div class="edu-school">The University of Alabama in Huntsville</div>
+          </div>
+          <span class="edu-date">August 2025 - Present (Est. Spring 2027)</span>
+        </li>
+
+        <li class="edu-item">
+          <div>
+            <div class="edu-degree">Bachelor of Science in omputer Science</div>
+            <div class="edu-school">The University of Alabama in Huntsville · Minor in Information Systems</div>
+          </div>
+          <span class="edu-date">August 2019 - May 2024</span>
+        </li>
+
+      </ul>
+    </section>
+
+    
+
     <!-- ════════════ EXPERIENCE ════════════ -->
-    <!-- ✏️ EDIT: duplicate .exp-item blocks to add more roles -->
     <section class="resume-section" id="experience">
       <h2 class="section-label">Experience</h2>
       <ul class="experience-list">
 
         <li class="exp-item">
           <div class="exp-header">
-            <span class="exp-role">Senior Software Engineer</span>
-            <span class="exp-date">Jan 2022 – Present</span>
+            <span class="exp-role">IT Systems Integrator</span>
+            <span class="exp-date">April 2025 – Present</span>
           </div>
-          <div class="exp-company">Acme Corp · San Francisco, CA</div>
+          <div class="exp-company">DEVCOM Aviation & Missile Center - SAIC Contract</div>
           <ul class="exp-bullets">
-            <li>Led re-architecture of the core API gateway, reducing average latency by 38% and cutting infrastructure costs by $120k/year.</li>
-            <li>Designed and shipped a feature-flagging platform used by 12 teams, enabling zero-downtime rollouts across 40+ microservices.</li>
-            <li>Mentored 4 junior engineers through bi-weekly 1:1s and code review; two were promoted within 18 months.</li>
-            <li>Collaborated with product and design to define the roadmap for a real-time analytics dashboard, now used by 2,000+ business clients.</li>
+            <li>Installation, configuration, and maintaining information technology systems in both a stand-alone and client-server environments.</li>
+            <li>Installation, configuration, and maintaining hardware and software for local system network services, storage networking devices, and servers.</li>
+            <li>Integration of multiple information systems in a networked environment, evaluation and resolution of information system issues.</li>
+            <li>Assisted in the integration of state of the art $12M Army aviation simulation systems and general infrastructure desktops, audio visual, and IT systems as well as maintaining inventory and distribution of excess hardware.</li>
+            <li>Managed & tracked $500K+ of computer hardware inventory for Army aviation simulator and enterprise systems</li>
           </ul>
         </li>
 
         <li class="exp-item">
           <div class="exp-header">
-            <span class="exp-role">Software Engineer II</span>
-            <span class="exp-date">Aug 2019 – Dec 2021</span>
+            <span class="exp-role">Data Architect</span>
+            <span class="exp-date">September 2024 - April 2025</span>
           </div>
-          <div class="exp-company">DataStream Inc. · Remote</div>
+          <div class="exp-company">DEVCOM Aviation & Missile Center - IPTA Contract</div>
           <ul class="exp-bullets">
-            <li>Built an event-driven ETL pipeline in Python and Apache Kafka processing 50M+ events/day with sub-second delivery SLAs.</li>
-            <li>Migrated a monolithic Rails app to a React/TypeScript front-end, improving Lighthouse performance scores from 42 to 91.</li>
-            <li>Authored internal RFC process adopted team-wide, reducing design-phase ambiguity and re-work on new features by roughly 25%.</li>
+            <li>Created reports to help teams identify improvement areas</li>
+            <li>Designed, developed, and maintained Power Apps solutions to automate business processes and enhance user experience.</li>
+            <li>Created Power Automate workflows to streamline approvals, notifications, and data integration across platforms.</li>
+            <li>Wrote custom Power Automate expressions and Power Apps formulas for complex logic and automation.</li>
+            <li>Documented workflows, best practices, and troubleshooting guides for Power Apps, Power Automate, and Power BI.</li>
+            <li>Worked with business stakeholders to gather requirements and deliver low-code/no-code solutions that improve productivity.</li>
           </ul>
         </li>
 
         <li class="exp-item">
           <div class="exp-header">
-            <span class="exp-role">Software Engineer I</span>
-            <span class="exp-date">Jun 2017 – Jul 2019</span>
+            <span class="exp-role">Tier 2 System Administrator</span>
+            <span class="exp-date">January 2022 - September 2022; June 2023 - September 2024</span>
           </div>
-          <div class="exp-company">Bright Labs · Austin, TX</div>
+          <div class="exp-company">DEVCOM Aviation & Missile Center - IPTA & UAH Contract</div>
           <ul class="exp-bullets">
-            <li>Developed and maintained RESTful APIs serving 500k+ monthly active users in a Node.js/PostgreSQL stack.</li>
-            <li>Implemented automated regression test suite that cut QA cycle time from 3 days to 4 hours.</li>
+            <li>Acted as an assistant team lead</li>
+            <li>Participated in meetings to set policies and changes</li>
+            <li>Performed hardening of systems</li>
+            <li>Performed security scans of removable media and user systems</li>
+            <li>Wrote PowerShell scripts to solve redundant problems</li>
+            <li>Created documentation for end users and provided feedback on peer-created documentation</li>
+            <li>Assisted users with Microsoft/Army 365 error codes</li>
+            <li>Instructed and mentored new employees on procedures and practices</li>
+            <li>Logged help desk requests through Jira</li>
+            <li>Installed user’s credentials on mobile phones using Ivanti MobileIron MDM</li>
+            <li>Assisted and educated users with troubleshooting software and hardware issues</li>
+          </ul>
+        </li>
+
+        <li class="exp-item">
+          <div class="exp-header">
+            <span class="exp-role">Classroom Technician (Tiers 1-3)</span>
+            <span class="exp-date">October 2019 - December 2022</span>
+          </div>
+          <div class="exp-company">The University of Alabama in Huntsville</div>
+          <ul class="exp-bullets">
+            <li>Installed and maintained 150+ computers & audio-video components within classrooms</li>
+            <li>Installed monitors and projector systems for classroom computers</li>
+            <li>Planned software deployment throughout the campus</li>
+            <li>Supported professors with classroom technology needs and issues</li>
+            <li>Instructed professors and new coworkers on how equipment is operated and maintained</li>
+            <li>Provided ideas to increase efficiency in our day-to-day workflow</li>
+            <li>Provided solutions to the UAH Systems team on how Classroom Tech can more efficiently deploy and manage classroom computers</li>
           </ul>
         </li>
 
@@ -157,33 +180,24 @@
         <div class="skill-group">
           <div class="skill-group-name">Languages</div>
           <div class="skill-tags">
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Go</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Bash</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-name">Frontend</div>
-          <div class="skill-tags">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">Vite</span>
-            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">PowerShell (Intermediate)</span>
+            <span class="skill-tag">Python (Novice)</span>
+            <span class="skill-tag">C++ (Novice)</span>
+            <span class="skill-tag">SQL (Novice)</span>
+            <span class="skill-tag">Bash (Novice)</span>
+            <span class="skill-tag">ARMv8 Assembly (Novice)</span>
           </div>
         </div>
 
         <div class="skill-group">
           <div class="skill-group-name">Backend & Data</div>
           <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Redis</span>
-            <span class="skill-tag">Kafka</span>
-            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Unraid</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Active Directory</span>
+            <span class="skill-tag">Group Policy</span>
+            <span class="skill-tag">Microsoft Power Platform</span>
           </div>
         </div>
 
@@ -201,58 +215,7 @@
       </div>
     </section>
 
-    <!-- ════════════ EDUCATION ════════════ -->
-    <!-- ✏️ EDIT: update degree/school/dates. Add more .edu-item blocks if needed. -->
-    <section class="resume-section" id="education">
-      <h2 class="section-label">Education</h2>
-      <ul class="education-list">
 
-        <li class="edu-item">
-          <div>
-            <div class="edu-degree">B.S. Computer Science</div>
-            <div class="edu-school">University of Texas at Austin · Minor in Mathematics</div>
-          </div>
-          <span class="edu-date">2013 – 2017</span>
-        </li>
-
-      </ul>
-    </section>
-
-    <!-- ════════════ PROJECTS ════════════ -->
-    <!-- ✏️ EDIT: swap in your own projects. Delete this entire section if you don't want it. -->
-    <section class="resume-section" id="projects">
-      <h2 class="section-label">Projects</h2>
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <div class="project-name">Queryify</div>
-          <p class="project-desc">Open-source CLI tool that generates type-safe SQL queries from plain English descriptions using LLMs. 1.4k GitHub stars.</p>
-          <a href="https://github.com/alexmorgan/queryify" class="project-link" target="_blank" rel="noopener">
-            View on GitHub
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <div class="project-name">Patchwork</div>
-          <p class="project-desc">Visual diff tool for comparing JSON API responses across environments. Used internally at DataStream to catch schema regressions before deploys.</p>
-          <a href="https://github.com/alexmorgan/patchwork" class="project-link" target="_blank" rel="noopener">
-            View on GitHub
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <div class="project-name">SprintLog</div>
-          <p class="project-desc">Minimal Markdown-based standup journaling app built with Next.js and SQLite. Self-hosted in under 5 minutes.</p>
-          <a href="https://sprintlog.dev" class="project-link" target="_blank" rel="noopener">
-            Visit site
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </a>
-        </div>
-
-      </div>
-    </section>
 
     <footer class="site-footer">
       Updated June 2026 · Built with HTML & CSS
