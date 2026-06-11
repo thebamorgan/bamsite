@@ -308,6 +308,8 @@
       color: var(--accent);
       white-space: nowrap;
       padding-top: 3px;
+  text-align: right;
+  line-height: 1.4;
     }
     .exp-company {
       font-size: 13px;
