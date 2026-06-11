@@ -3,6 +3,10 @@ $(document).ready(function() {
     $(".window").draggable({
         handle: ".title-bar",
         containment: "#desktop" // Constrain dragging to the desktop area
+    }).resizable({
+        containment: "#desktop",
+        minHeight: 200,
+        minWidth: 250
     });
 
     // --- Window Opening Logic ---
